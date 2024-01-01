@@ -741,6 +741,10 @@ section {
   color: #FFFFFF; 
 }
 
+.light-mode.main-btn .btn-text {
+  color: var(--color-black); /* Override font color for light mode */
+}
+
 .main-btn .btn-icon {
   background-color: var(--color-secondary);
   display: flex;

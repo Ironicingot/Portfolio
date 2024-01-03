@@ -43,6 +43,10 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 a {
   display: inline-block;
   text-decoration: none;

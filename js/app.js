@@ -1,6 +1,11 @@
 (function () {
     [...document.querySelectorAll(".control")].forEach(button => {
         button.addEventListener("click", function() {
+            if (this.dataset.id === 'home') {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
             document.querySelector(".active-btn").classList.remove("active-btn");
             this.classList.add("active-btn");
             document.querySelector(".active").classList.remove("active");
@@ -28,4 +33,10 @@ function filterPortfolio(category) {
         }
     });
 }
+
+// Example: Toggle the main section when a button is clicked
+document.getElementById("yourButtonId").addEventListener("click", function() {
+    document.querySelector("main").style.display = 'block';
+});
+
 

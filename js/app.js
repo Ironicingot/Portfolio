@@ -11,3 +11,21 @@
         document.body.classList.toggle("light-mode");
     })
 })();
+
+document.querySelectorAll('.category-buttons button').forEach(button => {
+    button.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        filterPortfolio(category);
+    });
+});
+
+function filterPortfolio(category) {
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.style.display = 'block'; // or your preferred display style
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
